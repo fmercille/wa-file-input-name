@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import '@awesome.me/webawesome-pro/dist/styles/webawesome.css';
+
+import WaInput from "@awesome.me/webawesome-pro/dist/react/input/index.js"
+import WaComboBox from "@awesome.me/webawesome-pro/dist/react/combobox/index.js"
+import WaFileInput from "@awesome.me/webawesome-pro/dist/react/file-input/index.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form>
+        <WaInput name="my_input" label="Input" />
+        <WaComboBox name="my_combobox" label="ComboBox" />
+        <WaFileInput name="my_file_input" label="FileInput" />
+      </form>
     </div>
   );
 }
